@@ -1,0 +1,10 @@
+CMakeFiles/
+*.o
+CMakeCache.txt
+cmake_install.cmake
+cprj/
+to_linux.sh
+build.sh
+clean.sh
+compile_commands.json
+build/Makefile
