@@ -57,7 +57,7 @@ Now you can run the generated `.elf` on a `FVP_Corstone_SSE-300`
 
 ## How to edit
 
-You can use `vscode` to have the Swift completion and color syntax highlighting.
+You can use `vscode` to have the Swift completion and color syntax highlighting. You need to install the extension `Swift Language Support for Visual Studio Code`
 
 ![lsp](doc/lsp.png)
 
