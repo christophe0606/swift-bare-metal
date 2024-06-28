@@ -4,11 +4,19 @@ This is a quick experiment with embedded swift and CMSIS-DSP.
 
 ## How to build
 
+First, you need to install embedded swift. On my Mac, it was installed in `$HOME/Library/Developer/Toolchains/swift-latest.xctoolchain` and the `CMakeLists.txt` is using: 
+
+```cmake
+set(TOOLCHAIN_PATH "$ENV{HOME}/Library/Developer/Toolchains/swift-latest.xctoolchain/Info.plist")
+```
+
+
+
 The initial `CMakeLists.txt` was generated with CMSIS build tools. As consequence you need an installation of the CMSIS build tools and the CMSIS packs that are used by this example.
 
 As you can see from the `CMakeLists.txt`, the packs used are:
 
-```
+```shell
 "${CPACK}/ARM/CMSIS-DSP/1.15.0"
 "${CPACK}/ARM/CMSIS/6.0.0
 "${CPACK}/ARM/V2M_MPS3_SSE_300_BSP/"
@@ -17,7 +25,7 @@ As you can see from the `CMakeLists.txt`, the packs used are:
 
 You need to customize the `CMakeLists.txt` to use the right configuration from the CMSIS build tools:
 
-```
+```cmake
 set(TOOLCHAIN_VERSION_MIN "18.1.3")
 include ("${CTOOLS}/etc/CLANG.18.1.3.cmake")
 ```
