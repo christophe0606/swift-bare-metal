@@ -15,7 +15,7 @@ As you can see from the `CMakeLists.txt`, the packs used are:
 
 ```
 
-You needf to customize the `CMakeLists.txt` to use the right configuration from the CMSIS build tools:
+You need to customize the `CMakeLists.txt` to use the right configuration from the CMSIS build tools:
 
 ```
 set(TOOLCHAIN_VERSION_MIN "18.1.3")
