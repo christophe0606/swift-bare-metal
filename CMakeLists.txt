@@ -113,8 +113,9 @@ set(CMAKE_C_LINK_FLAGS "${LD_CPU} ${_LS}\"${LD_SCRIPT_PP}\" ${LD_FLAGS_GLOBAL} $
 
 # Compilation Database
 
+
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-add_custom_target(database COMMAND ${CMAKE_COMMAND} -E copy_if_different "${INT_DIR}/compile_commands.json" "${OUT_DIR}")
+add_custom_target(database COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_BINARY_DIR}/compile_commands.json" "${CMAKE_SOURCE_DIR}")
 
 # Setup Target
 
@@ -157,3 +158,4 @@ target_link_libraries(${TARGET}
     ${CMAKE_CURRENT_BINARY_DIR}/_swiftcode.o
 )
 add_dependencies(${TARGET} main-swiftcode)
+add_dependencies(${TARGET} database)

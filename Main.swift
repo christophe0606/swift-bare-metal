@@ -7,7 +7,6 @@ var myArray: [Float32] = [0.0, 0.0, 0.0, 0.0]
 struct Main {
 
     static func main() {
-
        myArrayA.withUnsafeMutableBufferPointer { bufA in
        myArrayB.withUnsafeMutableBufferPointer { bufB in
        myArray.withUnsafeMutableBufferPointer { buf in
@@ -26,12 +25,12 @@ struct Main {
         print("Failed to get a valid base address.")
         return
         }
-        
+
         arm_add_f32(addrA,addrB,addr,UInt32(myArrayA.count))
        
-        for x in myArray
+        for x: Float32 in myArray
         {
-        printFloat(Float32(x))
+           printFloat(Float32(x))
         }
        }
        }
